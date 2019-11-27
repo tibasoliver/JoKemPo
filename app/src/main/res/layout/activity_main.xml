@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:onClick="tocouBotao"
+        android:id="@+id/botaoPapel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="@+id/botaoPedra"
+        app:layout_constraintEnd_toStartOf="@+id/botaoTesoura"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botaoPedra"
+        app:layout_constraintTop_toTopOf="@+id/botaoPedra"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageButton
+        android:onClick="tocouBotao"
+        android:id="@+id/botaoPedra"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/ic_tesoura_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botaoPapel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageButton
+        android:onClick="tocouBotao"
+        android:id="@+id/botaoTesoura"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_bright"
+        app:layout_constraintBottom_toBottomOf="@+id/botaoPapel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botaoPapel"
+        app:layout_constraintTop_toTopOf="@+id/botaoPapel"
+        app:srcCompat="@drawable/tesoura" />
+
+    <ImageView
+        android:id="@+id/jogador1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/botaoPedra"
+        app:layout_constraintEnd_toStartOf="@+id/jogador2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/interrogacao" />
+
+    <ImageView
+        android:id="@+id/jogador2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/jogador1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/jogador1"
+        app:layout_constraintTop_toTopOf="@+id/jogador1"
+        app:layout_constraintVertical_bias="0.622"
+        app:srcCompat="@drawable/interrogacao" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/jogador1"
+        app:layout_constraintEnd_toEndOf="@+id/jogador2"
+        app:layout_constraintStart_toStartOf="@+id/jogador1"
+        app:layout_constraintTop_toTopOf="@+id/jogador1"
+        app:srcCompat="@drawable/vs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
